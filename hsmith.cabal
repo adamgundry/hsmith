@@ -1,0 +1,35 @@
+cabal-version:       >=1.10
+name:                hsmith
+version:             0.1.0.0
+synopsis:            Random generation of well-typed Haskell programs.
+-- description:
+license:             BSD3
+license-file:        LICENSE
+author:              Adam Gundry
+maintainer:          Adam Gundry <adam@well-typed.com>
+category:            Testing
+build-type:          Simple
+tested-with:         ghc ==8.10.1
+extra-source-files:  CHANGELOG.md
+
+bug-reports:   https://github.com/adamgundry/hsmith
+source-repository head
+  type:     git
+  location: https://github.com/adamgundry/hsmith.git
+
+executable hsmith
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >=4.14 && <4.15
+                     , containers
+                     , ghc-source-gen >=0.4.0.0 && <0.5
+                     , ghc
+                     , ghc-paths >=0.1.0.12 && <0.2
+                     , mtl
+                     , optics >= 0.3 && <0.4
+                     , process
+                     , QuickCheck >=2.14 && <2.15
+                     , unification-fd >=0.10.0.1 && <0.11
+  hs-source-dirs:      src
+  default-language:    Haskell2010
